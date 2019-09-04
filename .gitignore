@@ -1,2 +1,2 @@
-*.env
-!*.example.env
+env/*.env
+env/!*.example.env
