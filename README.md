@@ -8,10 +8,10 @@ You can accomplish this by simply connecting the host with two different network
 
 ## Usage
 
-- :one: - clone the repo :arrow_down:
-- :two: - `docker-compose up` :whale:
-- :three: - judge is working on your http://localhost :smiley:
-- :four: - enjoy :tada:
+:one: - clone the repo :arrow_down:
+:two: - `docker-compose up` :whale:
+:three: - judge is working on your http://localhost :smiley:
+:four: - enjoy :tada:
 
 ## How it works
 
