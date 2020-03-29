@@ -9,9 +9,11 @@ You can accomplish this by simply connecting the host with two different network
 ## Usage
 
 :one: - clone the repo :arrow_down:  
-:two: - `docker-compose up` :whale:  
-:three: - judge is working on your http://localhost :smiley:  
-:four: - enjoy :tada:  
+:two: - remove `.example` from the files in env dir
+:three: - configure the `.env` files
+:four: - `docker-compose up` :whale:  
+:five: - judge is working on your http://localhost :smiley:  
+:six: - enjoy :tada:
 
 ## How it works
 

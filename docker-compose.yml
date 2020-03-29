@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+  db:
+    image: mongo
+
+  cf-problem-scrapper-api:
+    build: https://github.com/kerolloz/codeforces-problem-scrapper-api.git
+
+  cf-submitter-api:
+    build: https://github.com/amrsalama/judge-tunnel-scraper.git
+    shm_size: 1gb
+    env_file: "./env/cf-submitter-api.env"
+
+  judge-api:
+    build: https://github.com/CodeCoursez/backend.git
+    env_file: "./env/judge-api.env"
+    depends_on:
+      - cf-problem-scrapper-api
+      - cf-submitter-api
+      - db
+
+  judge-frontend:
+    build: https://github.com/amrsalama/jt_fe.git
+    ports:
+      - 80:5000
+        # on localhost directly..
+        # no need to specify port
+        # less confusing to users
+    depends_on:
+      - judge-api
