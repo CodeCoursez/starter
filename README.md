@@ -9,7 +9,7 @@ You can accomplish this by simply connecting the host with two different network
 ## Usage
 
 :one: - clone the repo :arrow_down:  
-:two: - remove `.example` from the files in env dir  
+:two: - make a copy of .example files `for file in env/*.env; do cp "$file" "$(cut -d . -f 1 <<< $file).env"; done`  
 :three: - configure the `.env` files  
 :four: - `docker-compose up` :whale:  
 :five: - judge is working on your http://localhost :smiley:  
